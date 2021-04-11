@@ -18,11 +18,11 @@ public class Main {
 
             HtmlCreator.createDiffHtml(originalFile, newFile, originalFileName, newFileName);
 
+            System.out.println("SUCCESS!");
+
         } catch (IOException ex) {
             ex.printStackTrace();
         }
-
-        System.out.println("SUCCESS!");
 
     }
 }
