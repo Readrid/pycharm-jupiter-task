@@ -1,0 +1,87 @@
+<!Doctype html>
+<html>
+<head>
+  <title>Diff</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+  <style>
+    .split {
+      height: 100%;
+      width: 50%;
+      position: fixed;
+      z-index: 1;
+      top: 0;
+      overflow-x: hidden;
+      padding-top: 20px;
+    }
+    .left {
+      left: 0;
+      background-color: aliceblue;
+    }
+    .right {
+      right: 0;
+      background-color: aliceblue;
+    }
+    .centered {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -20%);
+      text-align: center;
+    }
+    .line-number {
+      background-color: lightgray;
+      color: #606060;
+      text-align: right;
+      padding-right: 5px;
+      border-right: 1px solid slategray;
+    }
+    .deleted {
+      background-color: gray;
+      opacity: 0.75;
+    }
+    .added {
+      background-color: green;
+      opacity: 0.75;
+    }
+    .changed {
+      background-color: cornflowerblue;
+      opacity: 0.75;
+    }
+    table {
+      border: 1px solid #dddfe1;
+      border-collapse: collapse;
+      color: black;
+      margin: 0 auto;
+      padding-bottom: 20px;
+      font-size: 25px;
+    }
+    td {
+      text-align: left;
+    }
+  </style>
+</head>
+<body>
+<div class="split left">
+    <h3 align="center">${originalFileName}</h3>
+    <table>
+      ${firstFile}
+      <tr>
+        <td class="line-number">end</td>
+        <td></td>
+      </tr>
+    </table>
+</div>
+<div class="split right">
+    <h3 align="center">${newFileName}</h3>
+    <table>
+      ${secondFile}
+      <tr>
+        <td class="line-number">end</td>
+        <td></td>
+      </tr>
+    </table>
+</div>
+</body>
+</html>
+
